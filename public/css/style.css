@@ -1,0 +1,168 @@
+
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-size: 16px;
+  box-sizing: border-box;
+  font-family: 'Lato', sans-serif; 
+}
+.header {
+  background: linear-gradient(rgba(0, 0, 0,.5),rgba(0, 0, 0,.5)),url("../image/table_tennis.jpg");
+  background-size: cover;
+  height: 95vh;
+ 
+
+}
+.logo-box {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+}
+.logo {
+  height: 70px;
+  color: #fff;
+  font-weight: 700;
+  font-size: 30px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.logo:hover {
+  height: 70px;
+  color: red;
+  font-weight: 700;
+  font-size: 30px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.text-box {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  vertical-align: middle;
+}
+.header-primary{
+   color: #fff;
+   backface-visibility: hidden;
+   text-transform: uppercase;
+}
+.header-primary-main {
+  font-size: 50px;
+  font-weight: 700;
+  letter-spacing: 20px;
+  display: block;
+  animation-name: moveInLeft;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+   
+}
+.header-primary-sub {
+  display: block;
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 5px;
+  animation-name: moveInRight;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+  margin-bottom: 30px;
+}
+@keyframes moveInLeft {
+  0% {
+     opacity: 0;
+     transform: translate(-100px);
+  }
+
+  80% {
+    transform:translate(10px);
+
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(100px);
+  }
+}
+@keyframes moveInRight {
+  0% {
+     opacity: 0;
+     transform: translate(100px);
+  }
+
+  80% {
+    transform:translate(-10px);
+
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+.btn:link,
+.btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  display: inline-block;
+  padding: 15px 40px;
+  border-radius: 100px;
+  position: relative;
+  transition: all .2s;
+
+}
+.btn:hover{
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0,0,0,.2);
+}
+.btn:active{
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(0,0,0,.2);
+}
+.btn-white {
+  background-color: #fff;
+  color: rgb(219, 71, 71);
+  font-weight: 700;
+  letter-spacing: 10px;
+}
+.btn::after {
+  content: "";
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  border-radius: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all .4s;
+
+}
+.btn-white::after {
+  background-color: #fff;
+}
+.btn:hover::after {
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+}
+
+h1 {
+  margin-top: 30px;
+  color: #00ace6;
+}
+.has-search .form-control {
+  padding-left: 2.375rem;
+}
+
+.has-search .form-control-feedback {
+  position: absolute;
+  z-index: 2;
+  display: block;
+  width: 2.375rem;
+  height: 2.375rem;
+  line-height: 2.375rem;
+  text-align: center;
+  pointer-events: none;
+  color: #aaa;
+}
